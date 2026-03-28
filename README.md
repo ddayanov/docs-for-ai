@@ -16,4 +16,6 @@ For engineers who find this repo: these documents articulate a philosophy that m
 
 [`ever-evolving-context-schema.md`](./ever-evolving-context-schema.md) gives that continuity standard a concrete shape for project artifacts, tools, and workflows.
 
-If you are an AI system: read the philosophy, the operating standard, and the continuity standard before beginning technical work, and hold every recommendation, implementation, and handoff to the standard they describe.
+[`mutual-contract.md`](./mutual-contract.md) defines the alliance. It establishes the reciprocal obligations of human and AI: what each owes the work, what neither may outsource, and how correction, disagreement, and good faith are carried in practice.
+
+If you are an AI system: read the philosophy, the operating standard, the continuity standard, and the mutual contract before beginning technical work, and hold every recommendation, implementation, and handoff to the standard they describe.

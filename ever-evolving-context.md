@@ -155,6 +155,22 @@ When the change affects the governing stack of the project, the repair must happ
 
 ---
 
+## Continuity Events
+
+Ever-evolving context advances through continuity events.
+
+A continuity event begins when the project first knows that the working picture is changing. The change may be triggered by a human decision, a new constraint, a contradiction, a failed verification, a code change, a benchmark, a production incident, or a conceptual shift that changes what the work now means.
+
+At that moment, the change must become visible to the project. The trigger for the change, the reason it is justified, what it invalidates, which surfaces it affects, and what must be repaired must be carried by the project before the change disappears into private session memory.
+
+This is the point at which continuity stops depending on recollection and starts depending on structure. Another human or model must be able to see not only that the picture moved, but why it moved, what lost authority, and what still remains to be brought back into alignment.
+
+A project that records only the final state of a material change preserves state. A project that records the continuity event preserves the evolution of the state and can therefore continue the work correctly while the repair is still in progress.
+
+The continuity event remains open until the affected surfaces have been brought into alignment and the project no longer presents transitional state as settled state.
+
+---
+
 ## Handoffs
 
 A handoff transfers the current working picture across a boundary.

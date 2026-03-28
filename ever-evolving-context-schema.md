@@ -13,14 +13,15 @@ It should be strong enough to prevent drift and light enough to survive real use
 
 ## Core Objects
 
-The system is built from six object types:
+The system is built from seven object types:
 
 1. `context_item`
 2. `decision`
-3. `update_event`
-4. `handoff_packet`
-5. `contradiction`
-6. `session_record`
+3. `continuity_event`
+4. `update_event`
+5. `handoff_packet`
+6. `contradiction`
+7. `session_record`
 
 These can live in markdown, JSON, YAML, a database, or a terminal tool.
 
@@ -146,7 +147,62 @@ impact_scope: "architecture"
 
 ---
 
-## 3. update_event
+## 3. continuity_event
+
+This object records a material change while continuity repair is still in progress.
+
+It is the mechanism by which context becomes ever-evolving rather than merely updated after the fact. A continuity event carries the trigger for change, the reason it matters, what lost authority, what surfaces now require repair, and what must happen before the project can be treated as settled again.
+
+### Required Fields
+
+- `id`
+- `trigger_type`
+  One of: `human_decision`, `constraint_change`, `repo_change`, `verification_failure`, `contradiction`, `production_signal`, `conceptual_shift`, `governing_stack_change`
+- `trigger_source`
+- `reason`
+- `opened_at`
+- `opened_by`
+- `affected_surfaces`
+- `invalidates`
+- `required_repairs`
+- `status`
+  One of: `open`, `repairing`, `closed`
+
+### Useful Optional Fields
+
+- `revision_anchor`
+- `human_input_required`
+- `preferred_resolver`
+  One of: `ai`, `human`, `shared`
+- `next_expected_action`
+- `related_context_ids`
+- `related_decision_ids`
+
+### Example
+
+```yaml
+id: ce_012
+trigger_type: conceptual_shift
+trigger_source: "codex session 2026-03-27"
+reason: "Continuity requires a first-class event object; update-after-the-fact is too weak."
+opened_at: "2026-03-27T23:10:00Z"
+opened_by: "human"
+affected_surfaces:
+  - "ever-evolving-context.md"
+  - "ever-evolving-context-schema.md"
+invalidates:
+  - "The assumption that update_event alone is sufficient."
+required_repairs:
+  - "Add continuity_event to the governing text."
+  - "Add continuity_event object to the schema."
+status: "repairing"
+preferred_resolver: "ai"
+next_expected_action: "Patch both continuity documents in the same continuity event."
+```
+
+---
+
+## 4. update_event
 
 This object records a change that may invalidate part of the current picture.
 
@@ -195,7 +251,7 @@ followup_action: "Update working bottleneck and regenerate handoff packet."
 
 ---
 
-## 4. handoff_packet
+## 5. handoff_packet
 
 This is the transferable unit at a boundary.
 
@@ -259,7 +315,7 @@ do_not_reopen:
 
 ---
 
-## 5. contradiction
+## 6. contradiction
 
 This object exists because contradiction must not remain implicit.
 
@@ -305,7 +361,7 @@ created_update_event_id: "upd_verify_014"
 
 ---
 
-## 6. session_record
+## 7. session_record
 
 This object records the boundary itself.
 
@@ -364,15 +420,17 @@ Any implementation that claims to maintain ever-evolving context must support th
 3. `mark_stale`
 4. `supersede_item`
 5. `record_decision`
-6. `record_update_event`
-7. `open_contradiction`
-8. `resolve_contradiction`
-9. `generate_handoff_packet`
-10. `close_session`
-11. `restore_session`
-12. `request_context_update`
-13. `apply_project_visible_update`
-14. `request_human_truth`
+6. `open_continuity_event`
+7. `close_continuity_event`
+8. `record_update_event`
+9. `open_contradiction`
+10. `resolve_contradiction`
+11. `generate_handoff_packet`
+12. `close_session`
+13. `restore_session`
+14. `request_context_update`
+15. `apply_project_visible_update`
+16. `request_human_truth`
 
 If the system cannot do these, it is not maintaining context.
 It is storing notes and hoping a human will perform the missing logic manually.
@@ -397,6 +455,8 @@ If a summary is built on stale items, the summary is stale.
 
 If an item is marked `project_visible` and `ai_primary`, the default expectation is direct AI upkeep. If it is marked `human_only` and `human_input_required`, the default expectation is explicit request rather than silent guesswork.
 
+An open `continuity_event` is also a freshness signal. Any surface listed in its `affected_surfaces` should be treated as potentially transitional until the event is closed.
+
 ---
 
 ## Contradiction Resolution
@@ -414,6 +474,21 @@ If the participant detecting the contradiction cannot repair the continuity surf
 
 Contradiction is not noise in the data.
 It is how the system preserves honesty under change.
+
+---
+
+## Continuity Event Resolution
+
+When a material change begins:
+
+1. open a `continuity_event`
+2. record the trigger and the reason
+3. name what lost authority
+4. list the surfaces that require repair
+5. record whether human input is required
+6. keep the event open until the affected surfaces are aligned
+
+If the event is not opened, the project is forced to infer the change after the fact. That weakens continuity exactly where continuity should be strongest.
 
 ---
 
