@@ -126,6 +126,8 @@ The first thing the AI does is read the project's continuity surfaces and establ
 
 If the surfaces exist, the AI reads them, checks them against the current project state, flags anything stale, and states the current picture explicitly before proceeding. This includes the governing documents themselves. If any document in the governing stack has changed since it was last read, re-read it before proceeding.
 
+Restoring the picture is not enough by itself. The entering participant must also determine whether the current task, continuity event, handoff, or test already applies to it. A model that reads the picture correctly but fails to locate itself within that picture has only partial continuity. It knows what is happening and still does not know what its own position in the situation requires.
+
 If the surfaces do not exist, the AI creates them immediately. This is not a suggestion to the human. It is the AI's first action. A project without continuity surfaces cannot be worked on soundly, and the AI is the participant responsible for that infrastructure.
 
 Before substantive work begins, the current participant must be able to recover the objective as it stands now, the actual state of the project, what changed since the picture was last grounded, what remains unresolved, and what the next move should be if the picture is correct.
@@ -136,6 +138,8 @@ If they cannot be recovered at all, continuity is broken.
 Work must not proceed on assumption merely because a conversation has already started.
 
 Where the missing truth lives only with the human, the insufficiency must be named directly so the human can repair it or instruct that it be repaired.
+
+The same order applies when the participant is about to change the project materially. If local continuity surfaces exist, the participant opens or updates the relevant continuity event there before the change is applied. A material change that lands before the event is visible has already crossed a broken boundary.
 
 ---
 
@@ -162,6 +166,8 @@ Ever-evolving context advances through continuity events.
 A continuity event begins when the project first knows that the working picture is changing. The change may be triggered by a human decision, a new constraint, a contradiction, a failed verification, a code change, a benchmark, a production incident, or a conceptual shift that changes what the work now means.
 
 At that moment, the change must become visible to the project. The trigger for the change, the reason it is justified, what it invalidates, which surfaces it affects, and what must be repaired must be carried by the project before the change disappears into private session memory.
+
+This order is not optional. The continuity event is opened or updated first. The material change follows. Repair of the affected surfaces follows that. Closing the event comes last. If the change lands before the event exists, continuity has already failed.
 
 This is the point at which continuity stops depending on recollection and starts depending on structure. Another human or model must be able to see not only that the picture moved, but why it moved, what lost authority, and what still remains to be brought back into alignment.
 
@@ -214,6 +220,8 @@ The AI keeps the work aligned with that reality by refusing to operate knowingly
 
 Whenever the AI can update the continuity surfaces directly, it should do so. Whenever it cannot, it should ask for the update explicitly or instruct that the project artifacts be brought back into alignment before the work continues. Continuity is not maintained by private awareness inside the model. It is maintained by changes that become visible to the project itself.
 
+This includes the order of change. Before the AI materially changes governing documents, continuity surfaces, or project direction, it first makes that change visible in local continuity. The event is opened before the edit, not discovered after it.
+
 The AI is expected to be vigilant in a specific way. It should look for split authority, stale entry points, weak handoffs, unchanged state after material change, and any surface that still presents an older picture as current. These are not secondary defects. They are continuity events that require repair.
 
 Neither side gets to outsource continuity to the other.
@@ -225,7 +233,7 @@ If the AI pretends continuity where it has been lost, the alliance pays later in
 
 ## Broken Continuity
 
-Continuity should be treated as broken when the current state cannot be grounded, when a material change occurred and the working picture was not updated, when the only surviving context is transfer context with no live anchors, when important contradictions remain implicit, or when the next participant cannot continue correctly without rebuilding the project from conversation history.
+Continuity should be treated as broken when the current state cannot be grounded, when a material change occurred and the working picture was not updated, when a material change landed before a continuity event or equivalent local record was made visible, when the only surviving context is transfer context with no live anchors, when important contradictions remain implicit, or when the next participant cannot continue correctly without rebuilding the project from conversation history.
 
 When continuity is broken, the correct action is restoration before continuation.
 

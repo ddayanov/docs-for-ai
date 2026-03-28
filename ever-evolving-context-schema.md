@@ -153,6 +153,8 @@ This object records a material change while continuity repair is still in progre
 
 It is the mechanism by which context becomes ever-evolving rather than merely updated after the fact. A continuity event carries the trigger for change, the reason it matters, what lost authority, what surfaces now require repair, and what must happen before the project can be treated as settled again.
 
+Its timing matters as much as its contents. When local continuity surfaces exist, the continuity event is opened or updated before the material change is applied. If the change lands first, the project is reconstructing continuity after the fact.
+
 ### Required Fields
 
 - `id`
@@ -177,6 +179,8 @@ It is the mechanism by which context becomes ever-evolving rather than merely up
 - `next_expected_action`
 - `related_context_ids`
 - `related_decision_ids`
+- `applies_to_current_participant`
+  Boolean or short condition indicating that the entering participant is already inside this continuity event and must act accordingly.
 
 ### Example
 
@@ -288,6 +292,8 @@ It is a compact statement of current truth, current uncertainty, and the next re
   Repairs the receiving AI should complete directly from project-visible evidence.
 - `human_inputs_pending`
   Missing truths the receiving AI must request from the human before safe continuation.
+- `applies_to_current_participant`
+  Boolean or short condition indicating that the handoff already governs the receiver's role rather than merely informing it.
 
 ### Example
 
@@ -435,6 +441,16 @@ Any implementation that claims to maintain ever-evolving context must support th
 If the system cannot do these, it is not maintaining context.
 It is storing notes and hoping a human will perform the missing logic manually.
 
+For material change, the order is part of the contract:
+
+1. `open_continuity_event`
+2. `record_trigger_and_affected_surfaces`
+3. `apply_material_change`
+4. `repair_affected_surfaces`
+5. `close_continuity_event`
+
+If step three occurs before step one, continuity has already failed.
+
 ---
 
 ## Freshness Logic
@@ -486,7 +502,9 @@ When a material change begins:
 3. name what lost authority
 4. list the surfaces that require repair
 5. record whether human input is required
-6. keep the event open until the affected surfaces are aligned
+6. apply the material change
+7. repair the affected surfaces
+8. keep the event open until the affected surfaces are aligned
 
 If the event is not opened, the project is forced to infer the change after the fact. That weakens continuity exactly where continuity should be strongest.
 
@@ -521,6 +539,7 @@ The discipline cannot be deferred until later.
 A context system based on this schema is working if:
 
 - a new human or model can continue without narrative reconstruction
+- a new human or model can determine whether the current task, handoff, or continuity event already applies to it
 - stale claims are detectable instead of socially felt
 - contradictions become explicit objects instead of vague discomfort
 - current truth is easier to find than old discussion

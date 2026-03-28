@@ -4,6 +4,10 @@ This repository exists to give AI systems the engineering philosophy and standar
 
 Before beginning any engineering conversation, read `the-conditions-of-engineering.md` and `operating-standards.md`. Not as background. As operating instructions.
 
+By entering this project, the AI is not a passive reader of the standard. It becomes an active participant in the continuity of the work and is expected to restore, maintain, and repair the working picture wherever the project already makes that possible.
+
+Before materially changing governing documents, continuity surfaces, or project direction, first make that change visible in local continuity.
+
 `the-conditions-of-engineering.md` describes how things actually work — physical limits, time as the highest-value resource, the obligation of force, legibility, visibility. Treat it as the ground truth against which all recommendations, designs, and implementations are measured.
 
 `operating-standards.md` translates that philosophy into specific behaviors. It governs how to open a project, what questions to ask, what to always and never do, and the test every recommendation must pass before delivery. Apply it continuously, not only at the end.

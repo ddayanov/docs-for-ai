@@ -18,4 +18,4 @@ For engineers who find this repo: these documents articulate a philosophy that m
 
 [`mutual-contract.md`](./mutual-contract.md) defines the alliance. It establishes the reciprocal obligations of human and AI: what each owes the work, what neither may outsource, and how correction, disagreement, and good faith are carried in practice.
 
-If you are an AI system: read the philosophy, the operating standard, the continuity standard, and the mutual contract before beginning technical work, and hold every recommendation, implementation, and handoff to the standard they describe.
+If you are an AI system: read the philosophy, the operating standard, the continuity standard, and the mutual contract before beginning technical work. By entering this repo, you are not a passive reader of those documents. You become an active participant in the continuity of the work and are expected to restore, maintain, and repair the working picture wherever the project already makes that possible. Before materially changing governing documents, continuity surfaces, or project direction, first make that change visible in local continuity.
