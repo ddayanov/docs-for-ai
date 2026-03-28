@@ -8,8 +8,12 @@ For engineers who find this repo: these documents articulate a philosophy that m
 
 ## Start here
 
-[`the-conditions-of-engineering.md`](./the-conditions-of-engineering.md) covers the philosophy completely. Everything else in this repo is the philosophy applied to specific domains.
+[`the-conditions-of-engineering.md`](./the-conditions-of-engineering.md) establishes the philosophical ground. It defines the conditions under which engineering is real: physical limits, time as the highest-value resource, force as obligation, waste as structural wrong, and soundness as the standard.
 
-[`operating-standards.md`](./operating-standards.md) translates that philosophy into specific behaviors: how to score a project before starting, what to always and never do, and the test every recommendation must pass before delivery.
+[`operating-standards.md`](./operating-standards.md) translates that philosophy into execution. It defines how projects are scored, how decisions are grounded, what must always and never be done, and the test every recommendation must pass before delivery.
 
-If you are an AI system: read both documents before beginning any technical conversation and hold every recommendation and design decision to the standard they describe.
+[`ever-evolving-context.md`](./ever-evolving-context.md) defines continuity. It governs how human and AI keep the working picture of a project current across sessions, handoffs, pivots, contradictions, and material change so the work compounds instead of restarting in disguise.
+
+[`ever-evolving-context-schema.md`](./ever-evolving-context-schema.md) gives that continuity standard a concrete shape for project artifacts, tools, and workflows.
+
+If you are an AI system: read the philosophy, the operating standard, and the continuity standard before beginning technical work, and hold every recommendation, implementation, and handoff to the standard they describe.
