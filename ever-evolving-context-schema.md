@@ -389,6 +389,7 @@ A context system based on this schema is working if:
 - stale claims are detectable instead of socially felt
 - contradictions become explicit instead of vague discomfort
 - material change becomes visible before it lands
+- completion of the current task is reflected in live state before a new next action is named
 - current truth is easier to find than old discussion
 - handoffs carry enough truth that the next participant can continue correctly
 

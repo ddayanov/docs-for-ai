@@ -247,6 +247,8 @@ Continuity maintenance is part of the work. It is not a separate performance tha
 
 Routine upkeep should therefore be quiet. When the AI updates the live state, repairs a handoff surface, or brings continuity artifacts back into alignment from project-visible truth, it does not need to make a ceremony of that fact. The maintenance should simply happen, and the project should remain current because it happened.
 
+This includes completion. When the current task, test, or continuity event has been completed in reality, the live continuity surfaces must be updated before a new next action is proposed. A project whose live state still names a task as current after that task is already complete is carrying a stale picture at the moving edge.
+
 The obligation to surface continuity work becomes explicit when the picture changed, when authority is split, when continuity is weak or broken, or when human input is required to restore the truth the project does not yet contain.
 
 Silence is acceptable for normal upkeep.
