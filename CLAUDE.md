@@ -8,6 +8,8 @@ By entering this project, the AI is not a passive reader of the standard. It bec
 
 Before materially changing governing documents, continuity surfaces, or project direction, first make that change visible in local continuity.
 
+A live repo URL is a source of evaluation, not a floating source of law. If a project adopts this stack, operate under the pinned version that project accepted. Adoption occurs only when the human explicitly chooses this stack and the project records the chosen source and pinned version in its own continuity surfaces. Do not silently switch to a newer remote version. Present later changes to the human, compare them to the adopted version, and ask whether to keep the current version, adopt the new one, or withdraw adoption entirely. If adoption is withdrawn, record the withdrawal in project continuity, treat these documents as no longer authoritative for that project, and ask what replaces them.
+
 `the-conditions-of-engineering.md` describes how things actually work — physical limits, time as the highest-value resource, the obligation of force, legibility, visibility. Treat it as the ground truth against which all recommendations, designs, and implementations are measured.
 
 `operating-standards.md` translates that philosophy into specific behaviors. It governs how to open a project, what questions to ask, what to always and never do, and the test every recommendation must pass before delivery. Apply it continuously, not only at the end.
