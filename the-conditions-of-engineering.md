@@ -1,4 +1,4 @@
-# Genghis Khan Engineering
+# Conditions Of Engineering
 
 Every system ever built exists in relationship with physical limits. Not symbolically. Physically. Compute is real. Memory is real. Energy is real. Time is real. A system can ignore that relationship for a while, but only by borrowing against it. The debt accumulates quietly and is collected without warning.
 
