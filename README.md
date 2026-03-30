@@ -64,3 +64,5 @@ Adoption occurs only when the human explicitly chooses this stack for the projec
 If a newer version of this repository appears after adoption, treat it as a proposed update. Compare it to the currently adopted version, present the difference to the human, and change the governing version only with explicit approval.
 
 If adoption is withdrawn, stop treating this stack as governing instruction for that project, record the withdrawal in project continuity, and ask what replaces it: no replacement, local project rules, or another governance source.
+
+Adoption is not durable until the project contains an entry point file — AGENTS.md, CLAUDE.md, or equivalent — that instructs the next session to read this stack. If the AI adopts the stack and no such file exists, it creates one before the session ends. If the human is directing adoption, require the file before the session closes. Adoption without an entry point is session-scoped: it governs the current conversation and evaporates at the next boundary.

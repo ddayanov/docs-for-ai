@@ -284,18 +284,23 @@ resolved_by: "codex"
 
 ## Required Operations
 
-Any implementation that claims to maintain ever-evolving context must support these operations:
+Any implementation that claims to maintain ever-evolving context must support these operations. Supporting them does not mean logging every operation as a formal ceremony. Some operations are explicit acts that must be visible in the project surfaces. Others are implicit — naturally expressed through maintaining surfaces well. The distinction matters: requiring ritual for implicit operations produces overhead without improving continuity.
 
-1. `create_context_item`
-2. `update_context_item`
-3. `supersede_item`
-4. `record_decision`
+**Explicit operations** — must be visible as discrete acts in the project surfaces:
+
 5. `open_continuity_event`
 6. `close_continuity_event`
 7. `flag_contradiction`
 8. `resolve_contradiction`
 9. `generate_handoff_packet`
 10. `restore_session`
+
+**Implicit operations** — expressed through keeping surfaces current; no separate log required:
+
+1. `create_context_item`
+2. `update_context_item`
+3. `supersede_item`
+4. `record_decision`
 
 If the system cannot do these, it is not maintaining continuity.
 It is storing notes and hoping a human will perform the missing logic manually.
@@ -380,6 +385,14 @@ One practical starting pattern looks like this:
   Evidence artifacts referenced by context items
 
 The project grows into this structure when the cost of not having it exceeds the cost of maintaining it.
+
+### Visibility
+
+Continuity surfaces are local by default. They carry working state, not governing law, and their honesty depends on not being curated for external audiences. Open questions, in-progress reasoning, stale items under repair, and contradictions mid-resolution belong in working state precisely because they do not need to be presentable. Committing them to source control creates pressure to keep them clean, which corrupts their purpose.
+
+If a project's continuity surfaces need to be shared across machines or participants — distributed teams, frequent model handoffs, collaborative work requiring a common working picture — committing them to source control is correct. That is an explicit architectural decision. It should be recorded in the project's own continuity before the surfaces are committed, and the project's entry point files should make the shared location visible to any participant entering the project.
+
+The default is local. Overriding it requires a deliberate decision, not an accident.
 
 ---
 
