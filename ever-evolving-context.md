@@ -167,6 +167,8 @@ A continuity event begins when the project first knows that the working picture 
 
 At that moment, the change must become visible to the project. The trigger for the change, the reason it is justified, what it invalidates, which surfaces it affects, and what must be repaired must be carried by the project before the change disappears into private session memory.
 
+Making the event visible does not require a dedicated file for each event. The event may live inside the project's existing live continuity surfaces so long as another participant can see it clearly while repair is in progress. Separate event files are justified only when event volume or complexity has earned them.
+
 This order is not optional. The continuity event is opened or updated first. The material change follows. Repair of the affected surfaces follows that. Closing the event comes last. If the change lands before the event exists, continuity has already failed.
 
 This is the point at which continuity stops depending on recollection and starts depending on structure. Another human or model must be able to see not only that the picture moved, but why it moved, what lost authority, and what still remains to be brought back into alignment.

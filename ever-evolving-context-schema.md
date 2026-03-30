@@ -134,6 +134,8 @@ It is the mechanism by which context becomes ever-evolving rather than merely up
 
 Its timing matters as much as its contents. When local continuity surfaces exist, the continuity event is opened or updated before the material change is applied. If the change lands first, the project is reconstructing continuity after the fact.
 
+The event must be visible, but it does not need its own file by default. A continuity event may be carried inside the project's existing live-state surface or equivalent local continuity area. Separate event files are a scaling choice, not a starting requirement.
+
 Routine upkeep is not a continuity event. If truth already moved and the surface is only catching up, update the surface directly and quietly. A continuity event exists for material change: the moments when the working picture is about to move and the transition must be made visible before another participant inherits the wrong state.
 
 ### Required Fields
@@ -369,7 +371,7 @@ One practical starting pattern looks like this:
 - `project.md`
   Canonical objective and constraints
 - `state.md`
-  Current working context
+  Current working context, including the active continuity event when dedicated event files are not yet warranted
 - `decisions.md`
   Governing decisions when they have earned a separate surface
 - `handoffs/`
