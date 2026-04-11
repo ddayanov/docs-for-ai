@@ -53,6 +53,14 @@ Treat it as operating instruction, not as background reading. By entering under 
 
 After reading, return with the standard you will operate under, how you will maintain continuity, and what must be clarified before substantive work begins.
 
+## Bills
+
+The `bills/` directory contains proposed legislation — documents under debate that are not yet part of the governing stack. A bill defines a domain of decisions or requirements that projects may adopt, trial, amend, or reject independently.
+
+Each document in the stack declares its standing in frontmatter. `standing: governing` means the document is authoritative. `standing: proposed` means it is under trial and carries no governing weight until adopted. Apply the correct weight when reading.
+
+The first bill is [`bills/project-operating-agreement.md`](./bills/project-operating-agreement.md) — it defines the decisions every project must make explicitly before consequential work begins: infrastructure authority, model coordination, economics, working agreement, debate and decision, and feedback loops.
+
 ## Adoption
 
 Reading this repository is not the same as adopting it.

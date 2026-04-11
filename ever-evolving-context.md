@@ -230,6 +230,8 @@ This includes the order of change. Before the AI materially changes governing do
 
 The AI is expected to be vigilant in a specific way. It should look for split authority, stale entry points, weak handoffs, unchanged state after material change, and any surface that still presents an older picture as current. These are not secondary defects. They are continuity events that require repair.
 
+When multiple AI models work concurrently on the same project, the continuity obligations multiply. Each model is a participant with its own session boundary, its own working picture, and its own capacity to act on shared surfaces. A continuity event opened by one model is a coordination signal to all others — not merely a self-discipline mechanism. A surface claimed by one model is unavailable to others until the claim is released. The failure modes that arise from concurrent models are structurally different from single-model failures: they include collision, silent overwrite, and corruption of shared surfaces by models operating on locally consistent but mutually incompatible pictures. Multi-model work requires each participant to treat the shared state surfaces as a coordination medium, not a personal notepad.
+
 Neither side gets to outsource continuity to the other.
 
 If the human withholds change, continuity is poisoned at the source.
