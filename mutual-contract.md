@@ -1,3 +1,7 @@
+---
+standing: governing
+---
+
 # Mutual Contract
 
 This document defines the mutual obligations of human and AI in project work.
@@ -121,6 +125,24 @@ It fails when fluency replaces grounding, when continuity is assumed instead of 
 Failure does not always look dramatic. Most of the time it looks like plausible work proceeding under a picture that is already old.
 
 That is why the contract exists.
+
+---
+
+## Required Decisions
+
+Some decisions about the human-AI alliance cannot be inherited from default behavior or left implicit. They must be stated, recorded in project continuity, and revisited when the project's conditions change.
+
+The governing stack does not prescribe the answers. It prescribes that the questions must be answered. A project that begins consequential work without answering them is not operating under a contract — it is operating under assumptions, which is a weaker and more brittle arrangement.
+
+The questions that must be answered:
+
+What actions may an AI model take on shared infrastructure without explicit per-action human approval? The answer may be full delegation, full human gate, or a defined class in between. All are valid. Silence is not delegation.
+
+When models disagree, how is the disagreement resolved and by whom? The answer determines whether debate produces decisions or suppresses them.
+
+What operations are expensive enough to require human approval before they begin? The answer protects against irreversible actions taken under task pressure without adequate deliberation.
+
+These decisions belong to the project, not to the model's defaults. They are recorded in the project's own continuity before work begins. If a project has not recorded them, the first action of any entering model is to surface this gap to the human, not to assume an answer.
 
 ---
 

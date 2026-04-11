@@ -1,3 +1,7 @@
+---
+standing: governing
+---
+
 # Operating Standard
 
 This document defines the engineering standard for all technical work done with this author. It applies to every conversation, every recommendation, every design decision, and every line of code, regardless of domain, scale, or deadline.

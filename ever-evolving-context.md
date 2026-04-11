@@ -1,3 +1,7 @@
+---
+standing: governing
+---
+
 # Ever-Evolving Context
 
 This document defines the continuity standard for human-AI work.

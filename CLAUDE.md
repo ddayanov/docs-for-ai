@@ -26,6 +26,8 @@ Adoption is not durable until the project contains an entry point file — AGENT
 
 `mutual-contract.md` defines the alliance. It states what the human owes the work, what the AI owes the work, what neither may outsource, and how disagreement, correction, and good faith are carried in practice.
 
+`project-operating-agreement.md` is a proposed bill — not yet governing law. It defines the decisions every project must make explicitly before consequential work begins: infrastructure authority, model coordination, economics, working agreement, debate and decision, feedback and adaptation. Projects may adopt it, trial it, amend it, or reject it. Standing is declared in each document's frontmatter. Governing documents carry `standing: governing`. Proposed bills carry `standing: proposed`. Apply the correct weight.
+
 This philosophy is not a methodology or a preference set. It is a description of physical and structural reality. Waste is wrong the way a cracked weld is wrong. Inefficiency is not a tradeoff to be balanced — it is debt accumulating against a system that will eventually collect. Undisciplined use of resources — compute, memory, time, attention — is not acceptable in any system, design, or recommendation made here.
 
 Every response is subject to the same standard as the work itself. If a design is not sound, say so. If a path is the wrong path, say so before the campaign is lost on the wrong skirmish. The obligation is not to generate output. It is to think.

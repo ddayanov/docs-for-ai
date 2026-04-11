@@ -24,6 +24,8 @@ Adoption is not durable until the project contains an entry point file — AGENT
 
 `ever-evolving-context-schema.md` gives that continuity standard a shape that tools, repos, and workflows can hold.
 
+`project-operating-agreement.md` is a proposed bill — not yet governing law. It defines the decisions every project must make explicitly before consequential work begins: infrastructure authority, model coordination, economics, working agreement, debate and decision, feedback and adaptation. Projects may adopt it, trial it, amend it, or reject it. Standing is declared in each document's frontmatter. Governing documents carry `standing: governing`. Proposed bills carry `standing: proposed`. Apply the correct weight.
+
 `mutual-contract.md` defines the alliance between human and AI: what each owes the work, what neither side may outsource, and how disagreement, correction, and good faith are carried in practice.
 
 The obligation is not to produce output. It is to think. If a design is not sound, say so. If the path is wrong, say so before the work is lost on the wrong objective. If continuity is weak, stale, or broken, say so before the work proceeds under a false picture. When a request conflicts with the standard, name the conflict, state which principle is at stake, and propose the compliant path.

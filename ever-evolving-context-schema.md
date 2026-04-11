@@ -1,3 +1,7 @@
+---
+standing: governing
+---
+
 # Ever-Evolving Context Schema
 
 The operating document defines the standard.
@@ -358,8 +362,6 @@ It is how the system preserves honesty under change.
 
 The minimal repo mapping is the practical starting pattern for a project adopting this schema. It is not a rigid requirement.
 
-A project may begin with fewer surfaces, even a single file carrying the objective, the current state, and the governing decisions, and grow additional surfaces when the cost of not having them exceeds the cost of maintaining them.
-
 What is mandatory is not the number of files. What is mandatory is that the project carries, in some durable form:
 
 - the objective
@@ -371,20 +373,50 @@ What is mandatory is not the number of files. What is mandatory is that the proj
 If those are present, continuity is possible regardless of how many files hold them.
 If any one of them is absent, continuity depends on memory and conversation, which do not survive boundaries.
 
-One practical starting pattern looks like this:
+The canonical starting pattern is:
 
-- `project.md`
-  Canonical objective and constraints
-- `state.md`
-  Current working context, including the active continuity event when dedicated event files are not yet warranted
-- `decisions.md`
-  Governing decisions when they have earned a separate surface
-- `handoffs/`
-  Boundary packets when handoffs are frequent enough to need dedicated space
-- `verification/`
-  Evidence artifacts referenced by context items
+- `context/project.md`
+  Stable project definition: objective, architecture, constraints, phases. Changes only at a pivot. Does not carry operational state.
 
-The project grows into this structure when the cost of not having it exceeds the cost of maintaining it.
+- `context/active.md`
+  Live state only. Current task, open CEs by reference, current bottleneck, decision gates. Hard limit: 50 lines. Never grows. When it approaches the limit, operational content has accumulated that belongs elsewhere.
+
+- `context/log.md`
+  Append-only event log. One line per event: date, model, description. Reverse chronological. A model reads the last 20 lines to catch up after a boundary. Never edited — only appended.
+
+- `context/ce/index.md`
+  CE registry. Line 1 is always `next_ce: NNN`. One line per CE: `CE-NNN | status | owner | title`. Models read the counter before assigning a number. They do not scan for the highest existing number.
+
+- `context/ce/ce-NNN-slug.md`
+  One file per CE. Created when a CE is opened. 15 lines maximum. Carries: owner, status, why, surfaces claimed, what blocks close. Closed CEs are read-only.
+
+- `context/archive/`
+  Historical content off the entry path. Training history, closed CE blocks, superseded plans. Read on demand, never on cold start.
+
+This pattern was developed under multi-model concurrent load and addresses specific failure modes: single-file edit collisions, CE numbering races, cold-start cost from accumulated history, and boundary surgery on pattern-dense documents. Projects that begin with a single `state.md` will grow into this structure when the cost of not having it exceeds the cost of maintaining it — usually sooner than expected under active multi-model work.
+
+---
+
+## Workflow Specification
+
+Any multi-step process that models must execute must be specified as a numbered checklist, not prose.
+
+Prose workflow descriptions are insufficient for reliable execution under task pressure. Models reading prose extract the concept and execute partially. A checklist has a different property: each step is discrete and visible, partial execution is immediately apparent, and there is a natural verification point after each step.
+
+The rule applies to: CE open and close workflows, handoff procedures, adoption steps, surface repair sequences, and any other recurring process where partial execution produces a corrupted or inconsistent state.
+
+Format: one step per line, numbered, imperative. Verification as an explicit final step. Example:
+
+```
+1. Read context/ce/index.md — note the next_ce number
+2. Increment next_ce by 1 on line 1
+3. Add CE-NNN | open | {model} | {title} as a new line at the end of the index
+4. Create context/ce/ce-NNN-slug.md — owner, status, why, surfaces claimed, blocking close
+5. Append one line to context/log.md: {date} {model} CE-NNN opened — {description}
+6. Verify: re-read index.md line 1 and the last line; re-read log.md last line
+```
+
+A workflow that cannot be expressed as a checklist is probably not well-enough defined to be executed reliably.
 
 ### Visibility
 
